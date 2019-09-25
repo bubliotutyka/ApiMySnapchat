@@ -1,0 +1,27 @@
+db.createCollection("snaps", {
+  validator: { 
+      $jsonSchema: {
+          bsonType: "object",
+          required: [ "url", "from", "to", "duration", "seen" ],
+          properties: {
+              url : {
+                  bsonType: "string",
+              },
+              from : {
+                  bsonType: "string",
+              },
+              to : {
+                  bsonType: "string",
+              },
+              duration: {
+                  bsonType: "number",
+              },
+              seen: {
+                  bsonType: "bool",
+              }
+          }
+      }
+  },
+  validationAction: "error",
+  validationLevel: "strict"
+});

@@ -1,0 +1,21 @@
+db.createCollection("users", {
+  validator: { 
+      $jsonSchema: {
+          bsonType: "object",
+          required: [ "email", "username", "password" ],
+          properties: {
+              email : {
+                  bsonType: "string",
+              },
+              username : {
+                  bsonType: "string",
+              },
+              password : {
+                  bsonType: "string",
+              }
+          }
+      }
+  },
+  validationAction: "error",
+  validationLevel: "strict"
+});

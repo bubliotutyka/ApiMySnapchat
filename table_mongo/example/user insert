@@ -1,0 +1,4 @@
+
+db.users.insert([
+    { "email": "test@test.fr", "username": "sponge", "password": "test" }
+]);

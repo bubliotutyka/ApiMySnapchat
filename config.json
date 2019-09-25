@@ -1,0 +1,15 @@
+{
+  "port": 8000,
+  "host": "0.0.0.0",
+  "database": {
+    "host": "mongodb://localhost:27017",
+    "name" : "MySnapchat"
+  },
+  "uploadPath": "/public/snap",
+  "guestRoutes": [
+    { "url": "/api/user", "method": "POST" },
+    { "url": "/api/user/login", "method": "POST" },
+    { "url": "/api/user/verify", "method": "GET" },
+    { "url": "/api/snap/image", "method": "GET" }
+  ]
+}
